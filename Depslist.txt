@@ -1,0 +1,33 @@
+## installer
+yay
+
+## primary
+hyprland # duhh
+brightnessctl
+
+## secondary
+flameshot
+hyprpanel
+hyprpaper
+wl-paste
+wl-clipboard
+hyprlock
+hypridle
+fish
+kitty
+rofi
+wlogout
+pipewire
+batsignal
+hyprcursor
+hyprsettings
+caffeine
+hyprsession
+hyprpolkitagent
+pywal
+matugen
+
+## addons
+docker desktop
+Self hosted search engine (SearXNG)
+Kate text editor

@@ -1,0 +1,11 @@
+{
+    "custom/hypreco-updater": {
+        "icon":"𓆩♡𓆪",
+        "label":"Update!~",
+        "tooltip":"Update your system, Babe!~",
+        "executeOnAction":"notify-send 'Enjoy the update, babe!~'",
+        "actions": {
+            "onLeftClick": "kitty ~/Hypreco-dots/sys-updater-hypreco.sh"
+        }
+    }
+}
