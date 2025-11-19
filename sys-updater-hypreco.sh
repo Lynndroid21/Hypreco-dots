@@ -34,6 +34,8 @@ globUpd() {
     else
     if [[ $REPLY =~ ^[Nn]$ ]]; then
         echo "No worries, hun! Have a good day!"
+        sleep 4
+        command clear
         command exit
         fi
     fi
