@@ -71,4 +71,4 @@ simply drag and drop the files/folders you want into the .config folder, reboot 
 
 # DISCLAIMER
 
-The sys-updater-hypreco.sh script is currently only built for arch/arch-based distro users! multi-distro support is coming soon!
+The sys-updater-hypreco.sh script is currently only built for arch/arch-based distro users! multi-distro support is coming soon! This is an EVOLVING WIP, updates may happen rapidly during the beginning 6 months of this project!
