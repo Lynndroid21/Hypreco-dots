@@ -20,6 +20,8 @@ https://github.com/JaKooLit/Hyprland-Dots > rofi theme scheme and edited keybind
 
 Also inspired by https://github.com/AvengeMedia/DankMaterialShell
 
+Wallpapers found on https://wallhaven.cc
+
 # Installation
 
 ***REQUIRED:***
