@@ -12,7 +12,7 @@
   "menus.power.showLabel": true,
   "theme.bar.menus.monochrome": false,
   "wallpaper.pywal": true,
-  "wallpaper.image": "/home/krrj21/Pictures/Wallpapers/nsfw-wallhaven-vgjr63.jpg",
+  "wallpaper.image": "~/Hypreco-dots/configs/background.jpg",
   "bar.workspaces.monitorSpecific": false,
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.showApplicationIcons": true,
