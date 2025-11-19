@@ -68,3 +68,7 @@ Most of these dependencies are fairly simple to get running, the real work is in
 **Instructions**
 
 simply drag and drop the files/folders you want into the .config folder, reboot and enjoy!
+
+# DISCLAIMER
+
+The sys-updater-hypreco.sh script is currently only built for arch/arch-based distro users! multi-distro support is coming soon!
