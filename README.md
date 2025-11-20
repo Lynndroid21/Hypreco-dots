@@ -35,7 +35,8 @@ These are my inspos for some of the scripts in this pack!
 
 ***REQUIRED:***
 
-* yay (for the future updates that use my own install script for maximum lazy lol.)
+* yay (for the future updates that use my own install script for maximum lazy lol.) ONLY REQUIRED FOR ARCH USERS!
+
 * Hyprland (duhh)
 * brightnessctl
 * flameshot
