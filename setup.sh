@@ -193,7 +193,7 @@ run_HEupd() {
     warn "We advise that you update everything before install!"
     sleep 2
     echo ""
-    if confirm "Would you like to update your system first, hun?~ (Y/n): "; then
+    if confirm "Would you like to update your system first, hun?~"; then
     local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
 
     case $mgr in
