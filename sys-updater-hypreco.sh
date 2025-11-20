@@ -70,5 +70,10 @@ HE_rb() {
 }
 HE_rb
 
+sleep 2
+
 echo "all set bb!"
 
+sleep 4
+
+echo exit
