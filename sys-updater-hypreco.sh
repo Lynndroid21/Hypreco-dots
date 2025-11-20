@@ -78,4 +78,6 @@ echo "all set bb!"
 
 sleep 4
 
+command clear
+
 exit
