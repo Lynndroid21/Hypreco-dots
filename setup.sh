@@ -171,7 +171,18 @@ install_HEdeps() {
 }
 
 install_HEdots() {
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/btop $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/cava $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fastfetch $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fish $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hypr $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hyprpanel $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/kitty $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/matugen $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/rofi $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/background.jpg $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/starship.toml $DOTS_INSTALL_DIR
+    
 
     info "All the configs are fully installed! Yay~"
     ins_HEdots=true
