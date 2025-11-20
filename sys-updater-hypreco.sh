@@ -27,7 +27,16 @@ globUpd() {
     if [[ $REPLY =~ ^[Yy]$ ]]; then
     Upd_promHE() {
         echo "Time to get $HOSTNAME fully updated!~"
-        sudo pacman -Syu
+        local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
+
+        case $mgr in
+            pacman) sudo pacman -Syu ;;
+            dnf) sudo dnf update ;;
+            zypper) sudo zypper update ;;
+            xbps) sudo xbps-install -Su ;;
+            apt) sudo apt upgrade ;;
+            *) error "Sorry hun! We have no idea what package manager this is...."; return 1 ;;
+        esac
     }
     Upd_promHE
     updcomp=true
