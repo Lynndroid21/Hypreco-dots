@@ -27,25 +27,25 @@ HEexit()
 # Logging with gum fallback
 info() {
     if command -v gum &>/dev/null; then
-        gum style --foreground 10 "✅ $*"
+        gum style --foreground 10 "❤ $*"
     else
-        echo -e "\e[32m✅ $*\e[0m"
+        echo -e "\e[32m❤ $*\e[0m"
     fi
 }
 
 warn() {
     if command -v gum &>/dev/null; then
-        gum style --foreground 11 "⚠  $*"
+        gum style --foreground 11 "✿  $*"
     else
-        echo -e "\e[33m⚠  $*\e[0m"
+        echo -e "\e[33m✿  $*\e[0m"
     fi
 }
 
 error() {
     if command -v gum &>/dev/null; then
-        gum style --foreground 9 "❌ $*" >&2
+        gum style --foreground 9 "☢ $*" >&2
     else
-        echo -e "\e[31m❌ $*\e[0m" >&2
+        echo -e "\e[31m☢ $*\e[0m" >&2
     fi
 }
 
