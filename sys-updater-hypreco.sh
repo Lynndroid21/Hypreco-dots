@@ -22,7 +22,7 @@ echo "Updating.... Gimme a second, babe!~"
 sleep 4
 
 globUpd() {
-    read -p "Updater Loaded! Ready, $USER? (Y/n)" -n 1 -r
+    read -p "Updater Loaded! Ready, $USER? (Y/n): " -n 1 -r
     echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]; then
     Upd_promHE() {
@@ -42,6 +42,8 @@ globUpd() {
     updcomp=true
     else
     if [[ $REPLY =~ ^[Nn]$ ]]; then
+        sleep 2
+        echo ""
         echo "No worries, hun! Have a good day!"
         sleep 4
         command clear
@@ -58,7 +60,7 @@ HE_rb() {
     if $updcomp = true; then
         echo "You may have some important stuff to reload!"
         echo ""
-        read -p "Wanna restart your system, babe? (Y/n)" -n 1 -r
+        read -p "Wanna restart your system, babe? (Y/n): " -n 1 -r
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             echo ""
             command reboot
@@ -76,4 +78,4 @@ echo "all set bb!"
 
 sleep 4
 
-echo exit
+exit
