@@ -221,7 +221,7 @@ ins_HEproc() {
                 if $updcomp = true; then
                     echo "You have some important stuff to reload!"
                     echo ""
-                    if confirm "Wanna restart your system, babe? (Y/n): "; then
+                    if confirm "Wanna restart your system, babe?"; then
                         echo ""
                         sleep 1
                         command reboot
@@ -259,8 +259,7 @@ ins_HEproc() {
 main() {
     [[ $EUID -eq 0 ]] && { error "Don't run as root"; exit 1; }
     command -v git &>/dev/null || { error "git required"; exit 1; }
-
-    check_gum
+    
     clear
     while true; do
         if command -v gum &>/dev/null; then
