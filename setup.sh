@@ -259,8 +259,8 @@ ins_HEproc() {
 # Main
 
 main() {
-    [[ $EUID -eq 0 ]] && { error "Don't run as root"; exit 1; }
-    command -v git &>/dev/null || { error "git required"; exit 1; }
+    [[ $EUID -eq 0 ]] && { error "Don't run as root! That'll break things...."; exit 1; }
+    command -v git &>/dev/null || { error "git is required to use this installer, hun!"; exit 1; }
     
     clear
     while true; do
