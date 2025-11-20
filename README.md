@@ -69,7 +69,7 @@ Most of these dependencies are fairly simple to get running, the real work is in
 
 **Instructions**
 
-simply drag and drop the files/folders you want into the .config folder, reboot and enjoy!
+sClone this repo and run ./setup.sh and enjoy!
 
 # DISCLAIMER
 
