@@ -234,7 +234,7 @@ ins_HEproc() {
                 info "You're all set, hun! Enjoy your new desktop!~"
                 sleep 4
                 command clear
-                command exit
+                echo exit
                 fi
             else
             install_HEdots
