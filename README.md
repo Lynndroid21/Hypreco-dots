@@ -59,6 +59,7 @@ These are my inspos for some of the scripts in this pack!
 * hyprpolkitagent
 * pywal
 * matugen
+* starship
 
 *External Dependencies:*
 
