@@ -156,7 +156,7 @@ install_HEdeps() {
     info "Your package manager is: $mgr"
 
     case $mgr in
-        pacman) sudo pacman --needed -S brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen ;;
+        pacman) yay -S brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen ;;
         xbps) sudo xbps-install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen ;;
         dnf) sudo dnf install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen ;;
         zypper) sudo zypper install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen ;;
