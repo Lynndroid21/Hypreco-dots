@@ -3,23 +3,59 @@
 ## Hypreco Updater! Yayyy!
 ## Script works only on Arch/Arch-based distros.
 
-echo " _____                                                                _____ ";
-echo "( ___ )                                                              ( ___ )";
-echo " |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   | ";
-echo " |   |                                                                |   | ";
-echo " |   |                                                                |   | ";
-echo " |   |   ░█░█░█░█░█▀█░█▀▄░█▀▀░█▀▀░█▀█░░░█░█░█▀█░█▀▄░█▀█░▀█▀░█▀▀░█▀▄   |   | ";
-echo " |   |   ░█▀█░░█░░█▀▀░█▀▄░█▀▀░█░░░█░█░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀░█▀▄   |   | ";
-echo " |   |   ░▀░▀░░▀░░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀░░░▀▀░░▀░▀░░▀░░▀▀▀░▀░▀   |   | ";
-echo " |   |                                                                |   | ";
-echo " |   |                        By Lynndroid21!~                        |   | ";
-echo " |   |                                                                |   | ";
-echo " |___|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|___| ";
-echo "(_____)                                                              (_____)";
-echo ""
-echo "Updating.... Gimme a second, babe!~"
+readonly DOTS_REPO="https://github.com/Lynndroid21/Hypreco-dots"
+readonly DOTS_NAME="Hypreco-dots"
+readonly DOTS_INSTALL_DIR="$HOME/.config"
+readonly PATH_TO_GIT_CLONE="$HOME/$DOTS_NAME"
+readonly PATH_TO_ROFI_THEMES="$HOME/.local/share/rofi/themes"
 
-sleep 4
+DotsUpd() {
+    echo "Next, we'll update the dotfiles!~"
+    echo ""
+    read -p "Do you wanna backup your configs? (Y/n): " -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        sudo mkdir $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/btop $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/cava $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/fish $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/kitty $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/mako $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/hypr $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/rofi $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/matugen $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/hyprpanel $DOTS_INSTALL_DIR/backup
+        command cp -r -v -i $DOTS_INSTALL_DIR/fastfetch $DOTS_INSTALL_DIR/backup
+    fi
+    echo ""
+    echo "Now we're gonna redownload the dots....~"
+    echo ""
+    install_HEdots
+}
+
+install_HEdots() {
+    git clone $DOTS_REPO
+    echo ""
+    echo "Now copying them over....~"
+    echo ""
+    sleep 2
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/btop $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/cava $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fastfetch $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fish $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hypr $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hyprpanel $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/kitty $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/matugen $DOTS_INSTALL_DIR
+    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/rofi $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/background.jpg $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/starship.toml $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/Arch21-default.rasi $PATH_TO_ROFI_THEMES
+
+    info "All the configs are fully Updated! Yay~"
+    sleep 4
+    command clear
+    sleep 1
+}
 
 globUpd() {
     read -p "Updater Loaded! Ready, $USER? (Y/n): " -n 1 -r
@@ -51,9 +87,6 @@ globUpd() {
         fi
     fi
 }
-globUpd
-
-echo ""
 
 # Prompt restart
 HE_rb() {
@@ -70,6 +103,31 @@ HE_rb() {
         fi
     fi
 }
+
+# -----------------------------------------------------------------------------------------------------------------------
+
+echo " _____                                                                _____ ";
+echo "( ___ )                                                              ( ___ )";
+echo " |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   | ";
+echo " |   |                                                                |   | ";
+echo " |   |                                                                |   | ";
+echo " |   |   ░█░█░█░█░█▀█░█▀▄░█▀▀░█▀▀░█▀█░░░█░█░█▀█░█▀▄░█▀█░▀█▀░█▀▀░█▀▄   |   | ";
+echo " |   |   ░█▀█░░█░░█▀▀░█▀▄░█▀▀░█░░░█░█░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀░█▀▄   |   | ";
+echo " |   |   ░▀░▀░░▀░░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀░░░▀▀░░▀░▀░░▀░░▀▀▀░▀░▀   |   | ";
+echo " |   |                                                                |   | ";
+echo " |   |                        By Lynndroid21!~                        |   | ";
+echo " |   |                                                                |   | ";
+echo " |___|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|___| ";
+echo "(_____)                                                              (_____)";
+echo ""
+echo "Updating.... Gimme a second, babe!~"
+
+sleep 4
+
+globUpd
+
+echo ""
+
 HE_rb
 
 sleep 2

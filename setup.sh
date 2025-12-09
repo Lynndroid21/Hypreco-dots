@@ -7,6 +7,7 @@ readonly DOTS_REPO="https://github.com/Lynndroid21/Hypreco-dots"
 readonly DOTS_NAME="Hypreco-dots"
 readonly DOTS_INSTALL_DIR="$HOME/.config"
 readonly PATH_TO_GIT_CLONE="$HOME/$DOTS_NAME"
+readonly PATH_TO_ROFI_THEMES="$HOME/.local/share/rofi/themes"
 
 # bash trap command
 trap HEexit INT
@@ -182,6 +183,7 @@ install_HEdots() {
     command cp -r -v -i $PATH_TO_GIT_CLONE/configs/rofi $DOTS_INSTALL_DIR
     command cp -v -i $PATH_TO_GIT_CLONE/configs/background.jpg $DOTS_INSTALL_DIR
     command cp -v -i $PATH_TO_GIT_CLONE/configs/starship.toml $DOTS_INSTALL_DIR
+    command cp -v -i $PATH_TO_GIT_CLONE/configs/Arch21-default.rasi $PATH_TO_ROFI_THEMES
     
 
     info "All the configs are fully installed! Yay~"
