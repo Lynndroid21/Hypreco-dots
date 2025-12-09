@@ -128,6 +128,10 @@ globUpd
 
 echo ""
 
+DotsUpd
+
+sleep 1
+
 HE_rb
 
 sleep 2
