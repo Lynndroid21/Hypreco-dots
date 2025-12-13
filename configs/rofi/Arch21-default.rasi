@@ -76,7 +76,7 @@ lady {
 imagebox {
     background-color:           transparent;
     orientation:                vertical;
-    background-image:           url("~/Pictures/AppBackgrounds/wallhaven-5wgzp7.png", both);
+    background-image:           url("~/.config/rofi/wallhaven-zyo23j.jpg", both);
     background-color:           @background-color;
     //width:                      100px;
     //height:                     200px;
