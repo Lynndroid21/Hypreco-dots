@@ -22,9 +22,9 @@ configuration {
 
 /* ---- Global Properties ---- */
 * {
-
+    font:                        "Pixelon 12";
     background-alt:              @color1;
-    selected:                    @color12;
+    selected:                    @advanced3;
     active:                      @color11;
     urgent:                      red;
 
@@ -36,39 +36,75 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:						800px;
-	/*height:						450px;*/
+    width:						1200px;
+	height:						450px;
     x-offset:                   0px;
     y-offset:                   0px;
     spacing:                    0px;
-    padding:                    1px;
-    margin:                     0px; 
+    padding:                    0px;
+    margin:                     0px;
     border:                     2px;
-    border-color:               @active-background;
+    border-color:               @basic2;
     cursor:                     "default";
     location:                   center;
-    anchor:                     center;
+    anchor:                     west;
     fullscreen:                 false;
     enabled:                    true;
-    border-radius:              12px;
- 	background-color:           @background-color;
+    border-radius:              22px;
+    children:                   [ "avatar", "mainbox", "Arch21" ];
+    orientation:                horizontal;
+    background-color:           @basic;
 }
 
-/* ---- Mainbox ---- */
-mainbox {
-    enabled:                    true;
-    orientation:                vertical;
-	padding:					8px;
-    background-image:           url("~/Pictures/AppBackgrounds/wallhaven-5g6wx1.png", width);
-    children:                   [ "inputbar", "listbox" ];
-    border-radius:              12px;
+/* ---- Avatar ---- */
+avatar {
+    children:                   [ "lady" ];
+    padding:					50px 150px 50px 75px;
+    border-radius:              14px 0px 0px 14px;
+    background-color:		    @basic;
+}
+
+/* ---- Lady (image placeholder) ---- */
+lady {
+    border-radius:              14px;
+    background-image:           linear-gradient(270deg,#805bd0,#f596c0,#ffcc35);
+    /* margin:                     0em 13.4em 0em 0em; */
+    children:                   [ "imagebox" ];
 }
 
 /* ---- Imagebox ---- */
 imagebox {
     background-color:           transparent;
     orientation:                vertical;
+    background-image:           url("~/Pictures/AppBackgrounds/wallhaven-5wgzp7.png", both);
+    background-color:           @background-color;
+    //width:                      100px;
+    //height:                     200px;
+    border-radius:              14px;
+    margin:                     10px 10px 10px 10px;
+
     /*children:                   [ "inputbar"];*/
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+    enabled:                    true;
+    orientation:                vertical;
+    padding:                    10px 10px 10px 10px;
+    background-color:           @basic;
+    children:                   [ "inputbar", "listbox" ];
+    border-radius:              0px;
+    expand:                     true;
+}
+
+
+/* ---- Arch21 Bar ---- */
+Arch21 {
+    background-image:           @advanced2;
+    expand:                     false;
+    width:                      3.5em;
+    padding:                    0px;
+    border-radius:              0px;
 }
 
 /* ---- Listbox ---- */
@@ -76,16 +112,11 @@ listbox {
     spacing:                    4px;
     orientation:                vertical;
     children:                   [ "message", "listview" ];
-	padding:					10px;
-    border-radius:              12px;
-    border:                     1px;
-    border-color:               @active-background;
-	background-color:		    @background;
-}
-
-/* ---- Dummy ---- */
-dummy {
-    background-color:           transparent;
+	padding:					10px 10px 10px 10px;
+    border-radius:              14px;
+    border:                     2px;
+    border-color:               @intermediate2;
+	background-color:		    @basic;
 }
 
 /* ---- Inputbar ---- */
@@ -93,9 +124,10 @@ inputbar {
     enabled:                    true;
     text-color:                 @foreground;
     spacing:                    10px;
-    border-radius:              12px;
+    padding:                    0px 0px 0px 0px;
+    border-radius:              22px;
     border-color:               @foreground;
-	background-color:		    @background;
+	background-image:		    @advanced;
     children:                   [ "mode-switcher", "textbox-prompt-colon", "entry" ];
     border:                     1px;
     border-color:               @active-background;
@@ -112,17 +144,19 @@ textbox-prompt-colon {
 
 entry {
     enabled:                    true;
-	padding:					10px 0px 10px 0px;
+	padding:					10px 0px 10px 8px;
     text-color:                 @foreground;
     cursor:                     text;
     placeholder:                "  Search";
     placeholder-color:          inherit;
-	background-color:			@background;
+	background-color:			@basic;
+    border-radius:              18px;
 }
 
 /* ---- Mode Switcher ---- */
 mode-switcher{
     enabled:                    true;
+    padding:                    4px 0px 4px 4px;
     spacing:                    10px;
     background-color:          	transparent;
     text-color:                 @foreground;
@@ -130,20 +164,20 @@ mode-switcher{
 
 button {
     padding:                   2px 24px 2px 24px;
-    border-radius:             12px;
+    border-radius:             14px;
     background-color:          @background;
     text-color:                inherit;
     cursor:                    pointer;
-    border:                    1px;
+    border:                    2px;
     border-color:              @active-background;
 }
 
 button selected {
-    background-color:          @selected;
+    background-color:          @color13;
     text-color:                @foreground;
     border:                    1px;
-    border-color:              transparent;
-	
+    border-color:              @color15;
+
 }
 
 /* ---- Listview ---- */
@@ -161,14 +195,14 @@ listview {
 	fixed-height:               true;
 	fixed-columns:              false;
 	background-color:           @background;
-	border-radius:   	        12px;
+	border-radius:   	        14px;
 	border:						0px;
 }
 
 /* ---- Scrollbar ---- */
 scrollbar {
   border:						0px;
-  border-radius:				10px;
+  border-radius:				14px;
   background-color:				transparent;
   handle-color: 				@active;
   handle-width: 				2px ;
@@ -182,7 +216,7 @@ element {
     margin:                     2px;
     cursor:                     pointer;
     background-color:         	transparent;
-    border-radius:              12px;
+    border-radius:              14px;
     border:                     0px;
 }
 
@@ -201,9 +235,12 @@ element normal.active {
     text-color:                 inherit;
 }
 
-element-text selected,
+element-text selected {
+    background-color:           transparent;
+}
+
 element selected.normal {
-    background-color:           @active;
+    background-image:           @advanced3;
     text-color:                 inherit;
 }
 
@@ -254,15 +291,15 @@ message {
 }
 textbox {
     padding:                     12px;
-    border-radius:               10px;
-    background-color:            @background-alt;
+    border-radius:               14px;
+    background-image:            @advanced3;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
 error-message {
     padding:                     12px;
-    border-radius:               12px;
+    border-radius:               14px;
     background-color:            @background-alt;
     text-color:                  @background;
 }
