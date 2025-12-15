@@ -157,11 +157,11 @@ install_HEdeps() {
     info "Your package manager is: $mgr"
 
     case $mgr in
-        pacman) yay -S brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
-        xbps) sudo xbps-install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
-        dnf) sudo dnf install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
-        zypper) sudo zypper install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
-        apt) sudo apt update && sudo apt install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
+        pacman) yay -S brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire-pulse batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
+        xbps) sudo xbps-install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire-pulse batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
+        dnf) sudo dnf install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire-pulse batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
+        zypper) sudo zypper install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire-pulse batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
+        apt) sudo apt update && sudo apt install -y brightnessctl ags-hyprpanel-git hyprpaper wl-paste wl-clipboard hyprlock hypridle fish kitty rofi wlogout pipewire-pulse batsignal hyprcursor hyprsettings caffeine hyprsession hyprpolkitagent pywal matugen starship ;;
         *) error "Sorry hun, your package manager is unsupported.... T-T"; echo "" ; echo "Be sure to open depslist.txt and manually install the dependencies~" ; return 1 ;;
     esac
     info "All the dependencies are now installed! Next step!~"
