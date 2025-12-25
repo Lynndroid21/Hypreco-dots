@@ -57,6 +57,13 @@ install_HEdots() {
     sleep 1
 }
 
+DotsConf() {
+    read -p "" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        DotsUpd
+    fi
+}
+
 globUpd() {
     read -p "Updater Loaded! Ready, $USER? (Y/n): " -n 1 -r
     echo ""
@@ -120,7 +127,7 @@ echo " |   |                                                                |   
 echo " |___|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|___| ";
 echo "(_____)                                                              (_____)";
 echo ""
-echo "Updating.... Gimme a second, babe!~"
+echo "Preparing.... Gimme a second, babe!~"
 
 sleep 4
 
@@ -128,7 +135,7 @@ globUpd
 
 echo ""
 
-DotsUpd
+DotsConf
 
 sleep 1
 
