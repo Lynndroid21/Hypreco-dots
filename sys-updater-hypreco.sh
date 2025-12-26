@@ -73,7 +73,7 @@ globUpd() {
         local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
 
         case $mgr in
-            pacman) sudo pacman -Syu ;;
+            pacman) yay -Syu ;;
             dnf) sudo dnf update ;;
             zypper) sudo zypper update ;;
             xbps) sudo xbps-install -Su ;;

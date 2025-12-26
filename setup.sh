@@ -73,7 +73,7 @@ install_gum() {
     local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
 
     case $mgr in
-        pacman) sudo pacman -S gum ;;
+        pacman) yay -S gum ;;
         dnf) sudo dnf install -y gum ;;
         zypper) sudo zypper install -y gum ;;
         xbps) sudo xbps-install -y gum ;;
@@ -201,7 +201,7 @@ run_HEupd() {
     local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
 
     case $mgr in
-        pacman) sudo pacman -Syu ;;
+        pacman) yay -Syu ;;
         dnf) sudo dnf update ;;
         zypper) sudo zypper update ;;
         xbps) sudo xbps-install -Su ;;
