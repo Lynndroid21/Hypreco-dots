@@ -137,6 +137,8 @@ echo ""
 
 DotsConf
 
+echo ""
+
 sleep 1
 
 HE_rb
