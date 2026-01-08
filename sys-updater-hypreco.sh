@@ -38,18 +38,18 @@ install_HEdots() {
     echo "Now copying them over....~"
     echo ""
     sleep 2
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/btop $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/cava $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fastfetch $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/fish $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hypr $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/hyprpanel $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/kitty $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/matugen $DOTS_INSTALL_DIR
-    command cp -r -v -i $PATH_TO_GIT_CLONE/configs/rofi $DOTS_INSTALL_DIR
-    command cp -v -i $PATH_TO_GIT_CLONE/configs/background.jpg $DOTS_INSTALL_DIR
-    command cp -v -i $PATH_TO_GIT_CLONE/configs/starship.toml $DOTS_INSTALL_DIR
-    command cp -v -i $PATH_TO_GIT_CLONE/configs/Arch21-default.rasi $PATH_TO_ROFI_THEMES
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/btop $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/cava $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/fastfetch $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/fish $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/hypr $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/hyprpanel $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/kitty $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/matugen $DOTS_INSTALL_DIR
+    command cp -r -v $PATH_TO_GIT_CLONE/configs/rofi $DOTS_INSTALL_DIR
+    command cp -v $PATH_TO_GIT_CLONE/configs/background.jpg $DOTS_INSTALL_DIR
+    command cp -v $PATH_TO_GIT_CLONE/configs/starship.toml $DOTS_INSTALL_DIR
+    command cp -v $PATH_TO_GIT_CLONE/configs/Arch21-default.rasi $PATH_TO_ROFI_THEMES
 
     info "All the configs are fully Updated! Yay~"
     sleep 4
